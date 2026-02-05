@@ -1,0 +1,14 @@
+body {
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  min-height: 100vh;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 2fr 13fr;
+  gap: 12px;
+  /* background-image: linear-gradient(
+    var(--tertiary-color),
+    var(--primary-color)
+  ); */
+  font-size: 20px;
+}

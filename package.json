@@ -1,0 +1,35 @@
+{
+  "name": "webpack-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --config webpack.prod.js",
+    "build-config": "webpack",
+    "dev": "webpack serve",
+    "dev-config": "webpack serve --config webpack.dev.js",
+    "deploy-gh": "git subtree push --prefix dist origin gh-pages",
+    "commit-dist": "git add --force dist && git commit -m 'Initial dist subtree commit'",
+    "delete-dist": "rm -rf dist",
+    "delete-gh": "git push origin --delete gh-pages",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "css-loader": "^7.1.2",
+    "html-loader": "^5.1.0",
+    "html-webpack-plugin": "^5.6.0",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.94.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.0.4"
+  },
+  "dependencies": {
+    "date-fns": "^3.6.0",
+    "gh-pages": "^6.3.0"
+  }
+}
